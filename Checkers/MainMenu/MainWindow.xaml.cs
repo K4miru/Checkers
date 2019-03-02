@@ -20,8 +20,12 @@ namespace Checkers
     /// </summary>
     public partial class MainWindow : Window
     {
+        private BaseVM vm;
+
         public MainWindow()
         {
+            vm = new MainMenuVM();
+            DataContext = vm;
             InitializeComponent();
         }
     }
